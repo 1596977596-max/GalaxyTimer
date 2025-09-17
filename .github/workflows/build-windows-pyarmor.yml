@@ -79,7 +79,7 @@ jobs:
           $exePath = Join-Path -Path (Get-Location) -ChildPath "dist\galaxytimer.exe"
           if (Test-Path $exePath) {
             Move-Item -Force $exePath .\GalaxyTimer.exe
-            Write-Host "Moved to path:SaveGalaxyTimer.exe"
+            Write-Host "Moved to GalaxyTimer.exe"
           } else {
             Write-Error "GalaxyTimer.exe not found in the dist directory."
           }
@@ -94,4 +94,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: GalaxyTimer-exe
-          path: SaveGalaxyTimer.exe
+          path: GalaxyTimer.exe
